@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/alumnos', 'AlumnoController@index');
+
 Route::get('/', function () {
     return view('index');
 });
