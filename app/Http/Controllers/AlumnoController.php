@@ -11,6 +11,6 @@ class AlumnoController extends Controller
     public function index()
     {
       $alumnos = Alumno::all();
-      return view('alumnos.index')->with('alumnos',$alumnos);
+      return view('alumnos')->with('alumnos',$alumnos);
     }
 }

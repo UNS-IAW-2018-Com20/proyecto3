@@ -41,11 +41,11 @@ return [
 
         'mongodb' => [
             'driver'   => 'mongodb',
-            'host'     => env('DB_HOST'),
-            'port'     => env('DB_PORT'),
-            'database' => env('DB_DATABASE'),
-            'username' => env('DB_USERNAME'),
-            'password' => env('DB_PASSWORD'),
+            'host'     => 'admin:sudo@ds115350.mlab.com:15350/sistema-evaluaciones',
+            'port'     => 15350,
+            'database' => env('MONGO_DATABASE'),
+            'username' => env('MONGO_USERNAME'),
+            'password' => env('MONGO_PASSWORD'),
         ],
 
         'mysql' => [
