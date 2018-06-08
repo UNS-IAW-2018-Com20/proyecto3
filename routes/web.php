@@ -13,6 +13,16 @@
 
 Route::get('/alumnos', 'AlumnoController@index');
 
+Route::get('/crearEscala', 'AdminController@crearEscala');
+
+Route::get('/crearComision', 'AdminController@formComision');
+
+Route::get('/crearExamen', 'AdminController@formExamen');
+
+Route::post('/enviarEscala', 'AdminController@guardarEscala');
+
+Route::post('/enviarComision', 'AdminController@guardarComision');
+
 Route::get('/', function () {
     return view('index');
 });

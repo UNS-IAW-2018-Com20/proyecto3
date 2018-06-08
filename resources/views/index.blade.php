@@ -28,8 +28,12 @@
                             </div>
                         </div>
                         <div class="myform-bottom">
-                          <button type="button" class="btn btn-primary btn-lg btn-block">Crear Comisión</button>
-                          <button type="button" class="btn btn-primary btn-lg btn-block">Crear Escala Notas</button>
+                          <a href="/crearComision">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Crear Comisión</button>
+                          </a>
+                          <a href="/crearEscala">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Crear Escala Notas</button>
+                          </a>
                           <button type="button" class="btn btn-primary btn-lg btn-block">Crear Evaluación</button>
                         </div>
                     </div>
