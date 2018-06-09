@@ -35,7 +35,8 @@
                             <button type="button" class="btn btn-primary btn-lg btn-block">Crear Escala Notas</button>
                           </a>
                           <a href="/crearEvaluacion">
-                          <button type="button" class="btn btn-primary btn-lg btn-block">Crear Evaluación</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Crear Evaluación</button>
+                          </a>
                         </div>
                     </div>
                 </div>
