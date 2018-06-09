@@ -26,10 +26,9 @@
                           <div>
                             Seleccionar Alumnos
                             <select multiple  required="true" name="alumnos[]" id="select" size="5">
-                              {{--@foreach ($alumnos as $alumno)
+                              @foreach ($alumnos as $alumno)
                                 <option value={{$alumno -> _id}}> {{ $alumno->nombre }} {{ $alumno->apellido }} (LU: {{ $alumno->lu }})</option>
                               @endforeach
-                            --}}
                             </select>
                           </div>
                           <input type="submit" />

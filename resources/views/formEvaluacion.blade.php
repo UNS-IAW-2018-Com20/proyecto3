@@ -14,7 +14,7 @@
       </div>
       <div>
         Descripción
-        <input type="text" name="nombre" required="true"/>
+        <input type="text" name="descripcion" required="true"/>
       </div>
       <div>
         Fecha

@@ -23,6 +23,8 @@ Route::post('/crearEscala', 'AdminController@enviarEscala');
 
 Route::post('/crearComision', 'AdminController@enviarComision');
 
+Route::post('/crearEvaluacion', 'AdminController@enviarEvaluacion');
+
 Route::get('/', function () {
     return view('index');
 });

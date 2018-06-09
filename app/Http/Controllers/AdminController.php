@@ -9,6 +9,8 @@ use App\Comision;
 use App\Escala;
 use App\TipoEvaluacion;
 use App\Evaluador;
+use App\Evaluacion;
+use App\Evaluacion_Comision;
 use \stdClass;
 
 class AdminController extends Controller
@@ -65,8 +67,41 @@ class AdminController extends Controller
       return view('index');
     }
 
-    public function formExamen()
+    public function enviarEvaluacion()
     {
+      //Se obtiene la escala de notas
+      $escala = Escala::find(request('escala'));
+      $nombre = request('nombre');
+      $descripcion = request('descripcion');
+      $criterios = request('criterios');
+      $tipo = TipoEvaluacion::find(request('tipo'));
+      $fecha = request('fecha');
 
+      //Comisiones a las cuales se les agregará la evaluacion
+      $comisiones = request('comisiones');
+
+      foreach ($comisiones as $comision){
+        $comisionAlumnos = Comision::find($comision);
+
+        foreach ($comisionAlumnos->alumnos as $miembro){
+          //$evaluacion_comision = new Evaluacion_Comision;
+          $evaluacion_comision = new stdClass();
+          $evaluacion_comision->comision_id = $comisionAlumnos->_id;
+          $evaluacion_comision->comision_nombre = $comisionAlumnos->nombre;
+          $evaluacion_comision->evaluacion_nombre = $nombre;
+          $evaluacion_comision->descripcion = $descripcion;
+          $evaluacion_comision->nota = "";
+          $evaluacion_comision->observacion = "";
+          $evaluacion_comision->evaluacion_tipo = $tipo->descripcion;
+          $evaluacion_comision->criterios = $criterios;
+          $evaluacion_comision->notas_criterios = [];
+          $evaluacion_comision->publicada = false;
+
+          $alumno = Alumno::find($miembro);
+          $alumno->evaluaciones_comisiones =  array_merge($alumno->evaluaciones_comisiones, [$evaluacion_comision]);
+          $alumno->save();
+        }
+      }
+      return view('index');
     }
 }
