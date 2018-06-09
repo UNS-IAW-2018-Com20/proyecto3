@@ -13,7 +13,7 @@
 
 Route::get('/alumnos', 'AlumnoController@index');
 
-Route::get('/crearEscala', 'AdminController@crearEscala');
+Route::get('/crearEscala', 'AdminController@formEscala');
 
 Route::get('/crearComision', 'AdminController@formComision');
 
