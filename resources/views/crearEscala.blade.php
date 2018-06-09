@@ -9,16 +9,17 @@
     <input type="number" id="cantNotas" min="2" max="10" value="2" onChange="mostrarNotas()" />
     <h1>Notas</h1>
 
-    <form action="/enviarEscala" method="post">
+    <form method="post">
+      {{ csrf_field() }}
       Descripcion de la Escala:
-      <input type="text" name="notas" required="true"/>
+      <input type="text" name="descripcion" required="true"/>
 
       <div id="notasEscalaContainer">
         @for ($i = 0; $i < 2; $i++)
           Nota:
-          <input type="text" name="notas" required="true"/>
+          <input type="text" name="notas[]" required="true"/>
           Concepto:
-          <select name="notas">
+          <select name="conceptos[]">
             <option>Aprobado</option>
             <option>Desaprobado</option>
           </select> <br/>

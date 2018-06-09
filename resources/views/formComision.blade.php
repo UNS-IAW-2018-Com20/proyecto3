@@ -6,14 +6,15 @@
   </head>
   <body>
     <h1>Creación de Comisión</h1>
-    <form action="/enviarComision" method="post">
+    <form method="post">
+      {{ csrf_field() }}
       <div>
         Nombre de la Comisión
         <input type="text" name="nombre" required="true"/>
       </div>
       <div>
         Seleccionar Alumnos
-        <select multiple="true" required="true" name="alumnos" id="select" size="5">
+        <select multiple  required="true" name="alumnos[]" id="select" size="5">
           @foreach ($alumnos as $alumno)
             <option value={{$alumno -> _id}}> {{ $alumno->nombre }} {{ $alumno->apellido }} (LU: {{ $alumno->lu }})</option>
           @endforeach
