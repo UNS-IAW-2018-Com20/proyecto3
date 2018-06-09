@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Alumno;
 use App\Comision;
 use App\Escala;
+use App\TipoEvaluacion;
+use App\Evaluador;
 use \stdClass;
 
 class AdminController extends Controller
@@ -18,7 +20,11 @@ class AdminController extends Controller
 
     public function formEvaluacion()
     {
-      return view('formEvaluacion');
+      $comisiones = Comision::all();
+      $escalas = Escala::all();
+      $tipos = TipoEvaluacion::all();
+      $evaluadores = Evaluador::all();
+      return view('formEvaluacion',['evaluadores' => $evaluadores, 'comisiones' => $comisiones, 'escalas' => $escalas, 'tipos' => $tipos]);
     }
 
     public function enviarEscala()
