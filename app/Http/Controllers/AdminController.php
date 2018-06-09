@@ -16,6 +16,11 @@ class AdminController extends Controller
       return view('crearEscala');
     }
 
+    public function formEvaluacion()
+    {
+      return view('formEvaluacion');
+    }
+
     public function enviarEscala()
     {
       $form_notas = request('notas');

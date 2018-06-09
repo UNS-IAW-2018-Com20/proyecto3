@@ -17,7 +17,7 @@ Route::get('/crearEscala', 'AdminController@formEscala');
 
 Route::get('/crearComision', 'AdminController@formComision');
 
-Route::get('/crearExamen', 'AdminController@formExamen');
+Route::get('/crearEvaluacion', 'AdminController@formEvaluacion');
 
 Route::post('/crearEscala', 'AdminController@enviarEscala');
 
