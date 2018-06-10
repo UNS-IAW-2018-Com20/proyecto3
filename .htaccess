@@ -1,4 +1,4 @@
 AuthName "Directorio privado"
 AuthType Basic
-AuthUserFile .htpasswd
+AuthUserFile /app/.htpasswd
 Require valid-user
