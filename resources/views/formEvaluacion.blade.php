@@ -71,17 +71,11 @@
                         </div>
                         <div>
                           Criterios (Al menos uno)
-                          <ul>
-                            <li>
-                              Criterio 1 <input class="form-control" type="text" name="criterios[]" required="true"/>
-                            </li>
-                            <li>
-                              Criterio 2 <input class="form-control" type="text" name="criterios[]" />
-                            </li>
-                            <li>
-                              Criterio 3 <input class="form-control" type="text" name="criterios[]" />
-                            </li>
-                          </ul>
+                          <div>
+                            Criterio 1 <input class="form-control" type="text" name="criterios[]" required="true"/>
+                            Criterio 2 <input class="form-control" type="text" name="criterios[]" />
+                            Criterio 3 <input class="form-control" type="text" name="criterios[]" />
+                          </div>
                         </div>
                         <input class="btn btn-primary" type="submit" />
                       </form>
