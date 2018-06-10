@@ -1,9 +1,12 @@
-function agregar() {
-  let containerNotas = document.getElementById("notasEscalaContainer");
+
+    $("#crear").click(function(){
+
+  		$("#contenedor").append('<div>Nota: <input class="form-control form-group" type="text" name="notas[]" required="true"/> Concepto: <select class="form-control" name="conceptos[]"> <option>Aprobado</option> <option>Desaprobado</option> </select> <br/></div>');
+  	});
 
 
-  for (let i=0; i<cantNotas; i++){
-    containerNotas.innerHTML += "Nota:<input type='text' name='notas[]' required='true'/>Concepto:<select name='conceptos[]'><option>Aprobado</option><option>Desaprobado</option></select> <br/>";
-  }
 
-}
+    $("#eliminar").click(function(){
+        $("#contenedor div:last").remove();
+
+  	});
