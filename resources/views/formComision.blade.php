@@ -17,7 +17,7 @@
                       <div class="myform-bottom">
 
 
-                        <form method="post form-control">
+                        <form method="post">
                           {{ csrf_field() }}
                           <div class="form-group">
                             Nombre de la Comisión
