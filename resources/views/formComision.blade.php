@@ -10,28 +10,28 @@
                   <div class="col-lg-12 col-lg-offset-3 myform-cont">
                       <div class="myform-top">
                           <div class="myform-top-left">
-                              <h3>Comisiones</h3>
+                              <h3>Crear Comisión</h3>
                           </div>
                       </div>
 
                       <div class="myform-bottom">
 
-                        <h1>Creación de Comisión</h1>
-                        <form method="post">
+
+                        <form method="post form-control">
                           {{ csrf_field() }}
-                          <div>
+                          <div class="form-group">
                             Nombre de la Comisión
-                            <input type="text" name="nombre" required="true"/>
+                            <input class="form-control form-group" type="text" name="nombre" required="true"/>
                           </div>
                           <div>
                             Seleccionar Alumnos
-                            <select multiple  required="true" name="alumnos[]" id="select" size="5">
+                            <select class="form-control" multiple  required="true" name="alumnos[]" id="select" size="5">
                               @foreach ($alumnos as $alumno)
                                 <option value={{$alumno -> _id}}> {{ $alumno->nombre }} {{ $alumno->apellido }} (LU: {{ $alumno->lu }})</option>
                               @endforeach
                             </select>
                           </div>
-                          <input type="submit" />
+                          <input class="btn btn-primary" type="submit" />
                         </form>
 
                       </div>

@@ -21,15 +21,13 @@
 
                     <div class="myform-bottom">
 
-
-                      <h1>Notas</h1>
                       <form method="post">
                       {{ csrf_field() }}
                       Descripcion de la Escala:
                       <input class="form-group form-control" type="text" name="descripcion" required="true"/>
 
                       <div class="form-group" id="notasEscalaContainer">
-                        <h1>Cantidad de Notas de la Escala</h1>
+                        Cantidad de Notas de la Escala
 
                         <div class="container">
                           <div class="row">

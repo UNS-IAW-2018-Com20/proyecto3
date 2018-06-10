@@ -48,7 +48,7 @@ class AdminController extends Controller
       $escala->notas = $arreglo_notas;
       $escala->save();
 
-      return redirect('/');
+      return view('mensaje',['mensaje_titulo' => 'Éxito', 'mensaje_cuerpo' => 'Escala de Notas creada con éxito!!']);
     }
 
     public function formComision()
@@ -64,7 +64,7 @@ class AdminController extends Controller
       $comision->nombre = request('nombre');
       $comision->alumnos = request('alumnos');
       $comision->save();
-      return redirect('/');
+      return view('mensaje',['mensaje_titulo' => 'Éxito', 'mensaje_cuerpo' => 'Comisión creada con éxito!!']);
     }
 
     public function enviarEvaluacion()
@@ -141,6 +141,6 @@ class AdminController extends Controller
         $evaluador->save();
       }
 
-      return redirect('/');
+      return view('mensaje',['mensaje_titulo' => 'Éxito', 'mensaje_cuerpo' => 'Evaluación creada con éxito']);
     }
 }
