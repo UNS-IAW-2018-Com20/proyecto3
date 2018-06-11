@@ -48,7 +48,7 @@
                           @for ($i = 0; $i < 2; $i++)
                             <div>
                               Nota:
-                              <input class="form-control form-group" type="text" name="notas[]" required="true"/>
+                              <input class="form-control form-group" type="number" name="notas[]" required="true"/>
                               Concepto:
                               <select class="form-control" name="conceptos[]">
                                 <option>Aprobado</option>
