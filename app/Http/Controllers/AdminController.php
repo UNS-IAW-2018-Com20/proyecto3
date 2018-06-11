@@ -132,6 +132,7 @@ class AdminController extends Controller
 
         foreach ($comisionAlumnos->alumnos as $miembro){
           $alumno = Alumno::find($miembro);
+          //Se agrega la nueva evaluacion_comision
           $alumno->evaluaciones_comisiones =  array_merge($alumno->evaluaciones_comisiones, [$evaluacion_comision]);
           $alumno->save();
         }
