@@ -79,7 +79,6 @@ class AdminController extends Controller
       //De algunos elementos se obtiene el id y se buscan completos en la base de datos
       $escalaDB = Escala::find(request('escala'));
       $tipo = TipoEvaluacion::find(request('tipo'));
-      $evaluador = Evaluador::find($evaluador_id);
       //Se crea el obj escala
       $escala = new stdClass();
       $escala->descripcion = $escalaDB->descripcion;
@@ -138,8 +137,10 @@ class AdminController extends Controller
         }
 
         //El evaluador se le agrega la comision asignada
+        $evaluador = Evaluador::find($evaluador_id);
         $evaluador->evaluaciones_comisiones = array_merge($evaluador->evaluaciones_comisiones, [$evaluacion_comision]);
         $evaluador->save();
+        
       }
 
       return view('mensaje',['mensaje_titulo' => 'Éxito', 'mensaje_cuerpo' => 'Evaluación creada con éxito']);
