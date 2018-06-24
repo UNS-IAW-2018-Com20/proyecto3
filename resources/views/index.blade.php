@@ -16,19 +16,19 @@
                       </div>
                       <div class="myform-bottom">
                             <div class="row p-2">
-                                <a class="col-md-12" href="/crearComision">
-                                  <button type="button" class="btn btn-primary btn-lg btn-block">Crear Comisión</button>
+                                <a class="col-md-12" href="/comisiones">
+                                  <button type="button" class="btn btn-primary btn-lg btn-block">Comisiones</button>
                                 </a>
                             </div>
 
                             <div class="row p-2">
-                              <a  class="col-md-12" href="/crearEscala">
-                                <button type="button" class="btn btn-primary btn-lg btn-block ">Crear Escala Notas</button>
+                              <a  class="col-md-12" href="/escalas">
+                                <button type="button" class="btn btn-primary btn-lg btn-block ">Escalas de Notas</button>
                               </a>
                             </div>
                             <div class="row p-2">
-                              <a class="col-md-12" href="/crearEvaluacion">
-                                <button type="button" class="btn btn-primary btn-lg btn-block">Crear Evaluación</button>
+                              <a class="col-md-12" href="/evaluaciones">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Evaluaciones</button>
                               </a>
                             </div>
                     </div>

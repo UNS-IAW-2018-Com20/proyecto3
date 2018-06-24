@@ -10,7 +10,7 @@
                   <div class="col-lg-12 col-lg-offset-3 myform-cont">
                       <div class="myform-top">
                           <div class="myform-top-left">
-                              <h3>Crear Comisión</h3>
+                              <h3>Detalles Comisión</h3>
                           </div>
                       </div>
 
@@ -21,13 +21,13 @@
                           {{ csrf_field() }}
                           <div class="form-group">
                             Nombre de la Comisión
-                            <input class="form-control form-group" type="text" name="nombre" required="true"/>
+                            <input class="form-control form-group" type="text" name="nombre" required="true" value="{{ $comision -> nombre }}" />
                           </div>
                           <div>
                             Seleccionar Alumnos
                             <select class="form-control" multiple  required="true" name="alumnos[]" id="select" size="5">
                               @foreach ($alumnos as $alumno)
-                                <option value={{$alumno -> _id}}> {{ $alumno->nombre }} {{ $alumno->apellido }} (LU: {{ $alumno->lu }})</option>
+                                <option value={{$alumno -> _id}}  @if (in_array($alumno -> _id, $comision -> alumnos)) selected @endif> {{ $alumno->nombre }} {{ $alumno->apellido }} (LU: {{ $alumno->lu }})</option>
                               @endforeach
                             </select>
                           </div>

@@ -11,20 +11,49 @@
 |
 */
 
-Route::get('/alumnos', 'AlumnoController@index');
 
-Route::get('/crearEscala', 'AdminController@formEscala');
+//Comisiones
+Route::get('/comisiones', 'ComisionesController@index');
 
-Route::get('/crearComision', 'AdminController@formComision');
+Route::get('/comisiones/eliminar/{id}', 'ComisionesController@eliminar');
 
-Route::get('/crearEvaluacion', 'AdminController@formEvaluacion');
+Route::get('/comisiones/agregar','ComisionesController@agregarGet');
 
-Route::post('/crearEscala', 'AdminController@enviarEscala');
+Route::post('/comisiones/agregar','ComisionesController@agregarPost');
 
-Route::post('/crearComision', 'AdminController@enviarComision');
+Route::get('/comisiones/detalles/{id}','ComisionesController@detallesGet');
 
-Route::post('/crearEvaluacion', 'AdminController@enviarEvaluacion');
+Route::post('/comisiones/detalles/{id}','ComisionesController@detallesPost');
 
+
+//Evaluaciones
+Route::get('/evaluaciones', 'EvaluacionesController@index');
+
+Route::get('/evaluaciones/eliminar/{id}', 'EvaluacionesController@eliminar');
+
+Route::get('/evaluaciones/agregar','EvaluacionesController@agregarGet');
+
+Route::post('/evaluaciones/agregar','EvaluacionesController@agregarPost');
+
+Route::get('/evaluaciones/detalles/{id}','EvaluacionesController@detallesGet');
+
+Route::post('/evaluaciones/detalles/{id}','EvaluacionesController@detallesPost');
+
+//Escalas
+Route::get('/escalas', 'EscalaDeNotasController@index');
+
+Route::get('/escalas/eliminar/{id}', 'EscalaDeNotasController@eliminar');
+
+Route::get('/escalas/agregar','EscalaDeNotasController@agregarGet');
+
+Route::post('/escalas/agregar','EscalaDeNotasController@agregarPost');
+
+Route::get('/escalas/detalles/{id}','EscaladeNotasController@detallesGet');
+
+Route::post('/escalas/detalles/{id}','EscalaDeNotasController@detallesPost');
+
+
+//Index
 Route::get('/', function () {
     return view('index');
 });

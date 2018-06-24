@@ -10,3 +10,7 @@ El usuario es *"administrador"* y el password *"reentrega"*.\
 * La escala de notas debe tener al menos 2 notas definidas.
 * La fecha de la evaluación a crear no puede ser anterior a la fecha actual.
 * Los tipos de evaluación pueden ser Parcial o Proyecto.
+* Modificar/Eliminar una escala no produce cambios de escala en las evaluaciones creadas anteriormente con la misma.
+* Modificar/Eliminar una comisión no produce cambios en las evaluaciones creadas anteriormente.
+* Se decidió que al modificar una Evaluación no se permitese editar las comisiones ni el evaluador, ya que eso implicaba una gran cantidad de cambios en la base de datos (evaluadores y alumnos) que volvían al sistema muy ineficiente.
+* Al eliminar una evaluación, los cambios se ven reflejados en los alumnos de las comisiones asignadas y el evaluador respectivo.
