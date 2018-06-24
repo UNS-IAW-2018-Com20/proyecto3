@@ -1,6 +1,6 @@
 @extends('principal')
 
-@section('title','Crear Escala')
+@section('title','Escalas')
 
 @section('content')
 

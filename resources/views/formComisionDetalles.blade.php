@@ -1,6 +1,6 @@
 @extends('principal')
 
-@section('title','Evaluaciones')
+@section('title','Comisiones')
 
 @section('content')
   <div class="col-lg-12" id="divMenu">
