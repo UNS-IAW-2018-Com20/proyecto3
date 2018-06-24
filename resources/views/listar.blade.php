@@ -1,6 +1,6 @@
 @extends('principal')
 
-@section('title','{{$titulo}}')
+@section('title',$titulo)
 
 @section('content')
 
